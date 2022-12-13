@@ -15,6 +15,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+const port = process.env.PORT || 3000;
+
 // Connect to local mongoDB server
 /* mongoose.connect("mongodb://127.0.0.1:27017/todolistDB").then(() => {
   console.log('DB connection successfully');
@@ -151,6 +153,6 @@ app.get("/about", function (req, res) {
   res.render("about");
 });
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+app.listen(port, function () {
+  console.log(`Example app listening on port ${port}!`)
 });
