@@ -1,0 +1,3 @@
+mongoDB cluster admin
+user: admin-israel
+password: bolovo123
